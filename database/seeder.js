@@ -1,3 +1,6 @@
+const mongoose = require('mongoose');
+const Product = require('./index.js');
+
 let topCategories = ['Dresses', 'Sweaters', 'Tank Tops'];
 let bottomCategories = ['Pants', 'Shorts', 'Skirts'];
 let tops = ['Dress', 'Sweater', 'Tank'];
@@ -62,14 +65,15 @@ let generateTopProduct = () => {
     for (var i = 0; i < tops.length; i++) {
         for (var j = 0; j < 17; j++) {
             let oneProduct = {};
+            // Select product colors randomly
             let randomImages = generateRandomIndex(topImages);
             let randomImagesArray = [];
-            // Select product colors randomly
             for (randomImages; randomImages >= 0; randomImages--) {
                 randomImagesArray.push(topImages[i][randomImages])
             }
+            // Select product colors randomly 
             oneProduct['images'] = randomImagesArray;
-            oneProduct['property'] = topCategories[i];
+            oneProduct['property'] = 'top';
             oneProduct['type'] = tops[i];
             oneProduct['name'] = prefixes[generateRandomIndex(prefixes)] + " " + tops[i];
             oneProduct['price'] = prices[generateRandomIndex(prices)];
@@ -87,13 +91,15 @@ let generateBottomProduct = () => {
     for (var i = 0; i < bottoms.length; i++) {
         for (var j = 0; j < 17; j++) {
             let oneProduct = {};
+            // Select product colors randomly
             let randomImages = generateRandomIndex(topImages);
             let randomImagesArray = [];
             for (randomImages; randomImages >= 0; randomImages--) {
                 randomImagesArray.push(topImages[i][randomImages])
             }
+            // Select product colors randomly
             oneProduct['images'] = randomImagesArray;
-            oneProduct['property'] = bottomCategories[i];
+            oneProduct['property'] = 'bottom';
             oneProduct['type'] = bottoms[i];
             oneProduct['name'] = prefixes[generateRandomIndex(prefixes)] + " " + bottoms[i];
             oneProduct['price'] = prices[generateRandomIndex(prices)];
@@ -105,3 +111,14 @@ let generateBottomProduct = () => {
     }
     return outputArray;
 }
+
+let allProducts = () => {
+    return generateTopProduct().concat(generateBottomProduct());
+}
+
+let seedData = () => { 
+    let hundredProducts = allProducts();
+    Product.insertMany(hundredProducts);
+}
+
+seedData();
