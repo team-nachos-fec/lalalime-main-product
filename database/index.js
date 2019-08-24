@@ -14,7 +14,6 @@ const lalalimeSchema = new mongoose.Schema({
     name: String,
     price: String,
     description: String,
-    colors: Array,
     sizes: Array,
     breadcrumbs: Array
 })
