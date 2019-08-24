@@ -8,100 +8,15 @@ db.once('open', () => {
 });
 
 const lalalimeSchema = new mongoose.Schema({
-    top: {
-      tanktop: {
-            images: Array,
-            name: String,
-            price: String,
-            description: String,
-            colors: Array,
-            sizes: Array,
-            breadcrumbs: Array
-      },
-      dresses: {
-        images: Array,
-        name: String,
-        price: String,
-        description: String,
-        colors: Array,
-        sizes: Array,
-        breadcrumbs: Array
-      },
-      sweaters: {
-        images: Array,
-        name: String,
-        price: String,
-        description: String,
-        colors: Array,
-        sizes: Array,
-        breadcrumbs: Array
-      },
-      jacketsAndCoats: {
-        images: Array,
-        name: String,
-        price: String,
-        description: String,
-        colors: Array,
-        sizes: Array,
-        breadcrumbs: Array
-      },
-      hoodiesAndSweatshirts: {
-        images: Array,
-        name: String,
-        price: String,
-        description: String,
-        colors: Array,
-        sizes: Array,
-        breadcrumbs: Array
-      },
-      shortSleeveShirts: {
-        images: Array,
-        name: String,
-        price: String,
-        description: String,
-        colors: Array,
-        sizes: Array,
-        breadcrumbs: Array
-      },
-      longSleeveShirts: {
-        images: Array,
-        name: String,
-        price: String,
-        description: String,
-        colors: Array,
-        sizes: Array,
-        breadcrumbs: Array
-      },
-    },
-    bottoms: {
-        pants: {
-            images: Array,
-            name: String,
-            price: String,
-            description: String,
-            colors: Array,
-            sizes: Array,
-            breadcrumbs: Array
-        },
-        shorts: {
-            images: Array,
-            name: String,
-            price: String,
-            description: String,
-            colors: Array,
-            sizes: Array,
-            breadcrumbs: Array
-        },
-        skirts: {
-            images: Array,
-            name: String,
-            price: String,
-            description: String,
-            colors: Array,
-            sizes: Array,
-            breadcrumbs: Array
-        }
-    }
+    images: Array,
+    property: String,
+    type: String,
+    name: String,
+    price: String,
+    description: String,
+    colors: Array,
+    sizes: Array,
+    breadcrumbs: Array
 })
 
 const Product = mongoose.model()
