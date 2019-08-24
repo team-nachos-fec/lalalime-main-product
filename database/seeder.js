@@ -122,5 +122,3 @@ let seedData = () => {
     .then(() => console.log('Database seeded yay!'))
     .catch((err) => console.log('Unable to seed', err))
 }
-
-seedData();
