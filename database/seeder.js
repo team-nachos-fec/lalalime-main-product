@@ -118,7 +118,9 @@ let allProducts = () => {
 
 let seedData = () => { 
     let hundredProducts = allProducts();
-    Product.insertMany(hundredProducts);
+    Product.insertMany(hundredProducts)
+    .then(() => console.log('Database seeded yay!'))
+    .catch((err) => console.log('Unable to seed', err))
 }
 
 seedData();
