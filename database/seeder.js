@@ -5,7 +5,24 @@ let bottoms = ['Pant', 'Short', 'Skirt'];
 let prefixes = ['Breeze By', 'Ebb To Street', 'On The Fly', 'The Everyday', 'In Movement', 'Fast and Free', 'Forward Flow', 'Calm and Collected', 'Hotty Hot', 'Back in Action', 'Swiftly Relaxed', 'Cross Chill', 'Glyde Along', 'Stronger as One', 'Street to Shore', 'Day Tripper', 'Here To There', 'Inner Glow', 'Monday Best', 'Throw It On'];
 let prices = ['$98.00 USD', '$68.00 USD', '$150.00 USD', '$122.00 USD', '$93.00 USD', '$148.00 USD', '$74.00 USD', '$49.00 USD', '$65.00 USD', '$88.00 USD']; 
 let bottomSizes = [0, 2, 4, 6, 8, 10, 12, 14];
-let topSizes = [2, 4, 6, 8, 10, 12]; 
+let topSizes = [2, 4, 6, 8, 10, 12];
+let topImages = [
+    [
+      ['Black', 'https://bit.ly/2MzZGZI', 'https://bit.ly/2MzZBoS', 'https://bit.ly/30vLRyL'],
+      ['Antique Bark', 'https://bit.ly/2zhs0qZ', 'https://bit.ly/2zhs2z7', 'https://bit.ly/2KPkUR8'],
+      ['Light Grey', 'https://bit.ly/31Tz6hA', 'https://bit.ly/33WIqmT', 'https://bit.ly/2L3usqB']
+    ],
+    [
+      ['Almost Blue', 'https://bit.ly/2Lj0vDd', 'https://bit.ly/33UzbU3', 'https://bit.ly/2HpmuqJ'],
+      ['Pink Bliss', 'https://bit.ly/2Zo0UZV', 'https://bit.ly/2Mx0iiB', 'https://bit.ly/2ZfjtUX'],
+      ['Alpine White', 'https://bit.ly/2zu3EKV', 'https://bit.ly/323GjMj', 'https://bit.ly/2PcKqnI']
+    ],
+    [
+        ['French Clay', 'https://bit.ly/2ZtwIAu', 'https://bit.ly/323Gnvx', 'https://bit.ly/2HnWv2X'],
+        ['Brick Rose', 'https://bit.ly/2KREbBj', 'https://bit.ly/33VBq9K', 'https://bit.ly/2Zjl6QN'],
+        ['Lunar Rock', 'https://bit.ly/2MAjc8e', 'https://bit.ly/31WNHJh', 'https://bit.ly/30vJ08R']
+    ]
+]; 
 
 let bottomDesc = [
     [
@@ -45,6 +62,13 @@ let generateTopProduct = () => {
     for (var i = 0; i < tops.length; i++) {
         for (var j = 0; j < 17; j++) {
             let oneProduct = {};
+            let randomImages = generateRandomIndex(topImages);
+            let randomImagesArray = [];
+            // Select product colors randomly
+            for (randomImages; randomImages >= 0; randomImages--) {
+                randomImagesArray.push(topImages[i][randomImages])
+            }
+            oneProduct['images'] = randomImagesArray;
             oneProduct['property'] = topCategories[i];
             oneProduct['type'] = tops[i];
             oneProduct['name'] = prefixes[generateRandomIndex(prefixes)] + " " + tops[i];
@@ -63,6 +87,12 @@ let generateBottomProduct = () => {
     for (var i = 0; i < bottoms.length; i++) {
         for (var j = 0; j < 17; j++) {
             let oneProduct = {};
+            let randomImages = generateRandomIndex(topImages);
+            let randomImagesArray = [];
+            for (randomImages; randomImages >= 0; randomImages--) {
+                randomImagesArray.push(topImages[i][randomImages])
+            }
+            oneProduct['images'] = randomImagesArray;
             oneProduct['property'] = bottomCategories[i];
             oneProduct['type'] = bottoms[i];
             oneProduct['name'] = prefixes[generateRandomIndex(prefixes)] + " " + bottoms[i];
