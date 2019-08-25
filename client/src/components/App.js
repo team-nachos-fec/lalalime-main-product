@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ImagesList from '../components/ImagesList.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -38,9 +39,7 @@ class App extends React.Component {
     
     render() {
         return (
-            <div onClick={this.getProducts}>
-                Rendering the App! Woo
-            </div>
+            <ImagesList />
         )
     }
 }
