@@ -1,0 +1,21 @@
+.small-image-box {
+    box-sizing: border-box;
+    width: 150px;
+    height: 1600px;
+}
+
+.small-images {
+    width: 140px;
+    height: 250px;
+}
+
+.large-image-box {
+    box-sizing: border-box;
+    width: 800px;
+    height: 1600px;
+}
+
+.large-images {
+    width: 600px;
+    height: 700px;
+}

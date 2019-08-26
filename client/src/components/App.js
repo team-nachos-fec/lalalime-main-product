@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ScrollingImages from './ScrollingImages.js';
 import ImagesList from './ImagesList.js';
 import Breadcrumbs from './Breadcrumbs.js';
 import ProductDetail from './ProductDetail.js';
@@ -13,7 +14,8 @@ class App extends React.Component {
             price: '',
             description: '',
             sizes: [],
-            breadcrumbs: []
+            breadcrumbs: [],
+            currentImages: []
         }
         this.componentDidMount = this.componentDidMount.bind(this);
     }
@@ -29,7 +31,8 @@ class App extends React.Component {
                 price: response.data[0].price,
                 description: response.data[0].description,
                 sizes: response.data[0].sizes,
-                breadcrumbs: response.data[0].breadcrumbs
+                breadcrumbs: response.data[0].breadcrumbs,
+                currentImages: response.data[0].images[0]
             })
             console.log('State has been set', this.state);
         })
@@ -42,9 +45,14 @@ class App extends React.Component {
     render() {
         return (
             <div>
-            <Breadcrumbs breadcrumbs={this.state.breadcrumbs}/>
-            <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description}/>
-            <ImagesList images={this.state.images} />
+              <Breadcrumbs breadcrumbs={this.state.breadcrumbs}/>
+              <div className="small-image-box">
+                <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
+              </div>
+              <div className="large-image-box">
+                <ImagesList currentImages={this.state.currentImages.slice(2)} />
+              </div>
+              <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description}/>
             </div>
         )
     }
