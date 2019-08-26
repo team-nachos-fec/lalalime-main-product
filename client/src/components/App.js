@@ -11,7 +11,7 @@ class App extends React.Component {
             price: '',
             description: '',
             sizes: [],
-            breadcrumbs: [],
+            breadcrumbs: []
         }
         this.componentDidMount = this.componentDidMount.bind(this);
     }
@@ -27,7 +27,7 @@ class App extends React.Component {
                 price: response.data[0].price,
                 description: response.data[0].description,
                 sizes: response.data[0].sizes,
-                breadcrumbs: response.data[0].breadcrumbs,
+                breadcrumbs: response.data[0].breadcrumbs
             })
             console.log('State has been set', this.state);
         })
