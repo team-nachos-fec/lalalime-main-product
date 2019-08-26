@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import ImagesList from './ImagesList.js';
 import Breadcrumbs from './Breadcrumbs.js';
+import ProductDetail from './ProductDetail.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -42,6 +43,7 @@ class App extends React.Component {
         return (
             <div>
             <Breadcrumbs breadcrumbs={this.state.breadcrumbs}/>
+            <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description}/>
             <ImagesList images={this.state.images} />
             </div>
         )
