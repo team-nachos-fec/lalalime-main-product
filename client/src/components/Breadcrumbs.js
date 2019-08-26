@@ -5,7 +5,7 @@ const Breadcrumbs = (props) => {
         <div>
             <span>Women</span>
             {props.breadcrumbs.map((crumb, key) => {
-                return <span> > {crumb}</span>
+                return <span key={key}> > {crumb}</span>
             })}
         </div>
     )
