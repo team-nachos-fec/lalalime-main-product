@@ -46,12 +46,8 @@ class App extends React.Component {
         return (
             <div>
               <Breadcrumbs breadcrumbs={this.state.breadcrumbs}/>
-              <div className="small-image-box">
-                <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
-              </div>
-              <div className="large-image-box">
-                <ImagesList currentImages={this.state.currentImages.slice(2)} />
-              </div>
+              <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
+              <ImagesList currentImages={this.state.currentImages.slice(2)} />
               <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description}/>
             </div>
         )
