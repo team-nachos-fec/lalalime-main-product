@@ -13,6 +13,7 @@ const ProductColorsAndSizes = (props) => {
                 <label>Size</label>
                 <span>Select Size ></span>
             </div>
+            <span className="size-guide">Size guide</span>
         </div>
     )
 }

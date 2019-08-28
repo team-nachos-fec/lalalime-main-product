@@ -90,6 +90,7 @@ hr {
 }
 
 .sizes-box {
+    display: inline-block;
     background-color: #fff;
     width: 60%;
     height: 60px;
@@ -110,4 +111,13 @@ hr {
     margin-right: 20px;
     font-size: 12px;
     font-family: Verdana, sans-serif;
+}
+
+.size-guide {
+    float: right;
+    line-height: 60px;
+    margin-right: 30px;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
 }
