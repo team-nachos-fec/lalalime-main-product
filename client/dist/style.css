@@ -3,6 +3,10 @@ img {
     height: auto;
 }
 
+hr {
+    margin-top: 25px;
+}
+
 .container {
     display: grid;
     grid-template: 1500px / 7% 50% 43%;
@@ -38,7 +42,7 @@ img {
 .product-detail-box {
     box-sizing: border-box;
     display: inline-block;
-    width: 100%;
+    width: 90%;
     margin-top: 30px;
     margin-left: 50px;
 }
@@ -65,4 +69,18 @@ img {
     margin-top: 25px;
     line-height: 1.5;
 
+}
+
+.color-box {
+    margin-top: 50px;
+}
+
+.color-box img {
+    margin-right: 25px;
+}
+
+.color-name {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
 }

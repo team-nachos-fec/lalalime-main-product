@@ -49,7 +49,7 @@ class App extends React.Component {
               <div className="container">
                 <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
                 <ImagesList currentImages={this.state.currentImages.slice(2)} />
-                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description}/>
+                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)}/>
               </div>
             </div>
         )
