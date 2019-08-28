@@ -45,10 +45,12 @@ class App extends React.Component {
     render() {
         return (
             <div>
-              <Breadcrumbs breadcrumbs={this.state.breadcrumbs}/>
+            <Breadcrumbs breadcrumbs={this.state.breadcrumbs}/>
+            <div className="container">
               <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
               <ImagesList currentImages={this.state.currentImages.slice(2)} />
               <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description}/>
+            </div>
             </div>
         )
     }
