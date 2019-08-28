@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductColors from './ProductColors.js';
+import ProductColorsAndSizes from './ProductColorsAndSizes.js';
 
 const ProductDetail = (props) => {
     return (
@@ -9,7 +9,7 @@ const ProductDetail = (props) => {
             <h2 className="wwmt">Why we made this</h2>
             <p className="product-description">{props.description}</p>
             <hr/>
-            <ProductColors allColors={props.allColors} currentColor={props.currentColor}/>
+            <ProductColorsAndSizes allColors={props.allColors} currentColor={props.currentColor}/>
         </div>
     )
 }

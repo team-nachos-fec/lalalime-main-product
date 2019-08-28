@@ -1,3 +1,7 @@
+body {
+    background-color: #fafafa;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -83,4 +87,27 @@ hr {
     font-family: Verdana, sans-serif;
     font-size: 14px;
     margin-bottom: 10px;
+}
+
+.sizes-box {
+    background-color: #fff;
+    width: 60%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.sizes-box label {
+    float: left;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.sizes-box span {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
 }
