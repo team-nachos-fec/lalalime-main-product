@@ -17,6 +17,9 @@ const Checkout = (props) => {
                 <span>Order before 5pm and pick up today.</span> 
                 <div className="find-store-button">Find in Store</div>
             </div>
+            <div className="add-to-bag">
+                ADD TO BAG
+            </div>
         </div>
     )
 }

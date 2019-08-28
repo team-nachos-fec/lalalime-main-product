@@ -209,3 +209,21 @@ hr {
     font-size: 14px;
     text-decoration: underline solid red; 
 }
+
+.add-to-bag {
+    text-align: center;
+    margin: 30px auto 20px auto;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: bold;
+    background-color: #d22030;
+    color: white;
+    cursor: pointer;
+}
+
+.add-to-bag::hover {
+    
+}
