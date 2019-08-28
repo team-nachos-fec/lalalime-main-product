@@ -137,3 +137,75 @@ hr {
     font-family: 'Lato', Arial, sans-serif;
     font-size: 14px;
 }
+
+.checkout-box {
+    border: 1px solid #636363;
+    margin-top: 20px;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+.checkout-box label {
+    display: block;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.checkout-box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkout-option {
+    margin-left: 26px;
+    cursor: pointer;
+}
+
+.radio-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #636363;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.first-button {
+    background-color: red;
+}
+
+.checkout-box .first-button:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+
+.order-5pm {
+    margin-top: 15px;
+    margin-left: 36px;
+}
+
+.find-store-button {
+    display: block;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: none;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline solid red; 
+}
