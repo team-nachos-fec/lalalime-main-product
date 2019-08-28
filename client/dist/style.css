@@ -5,7 +5,9 @@ img {
 
 .container {
     display: grid;
-    grid-template: 1500px / 6% 54% 40%;
+    grid-template: 1500px / 7% 50% 43%;
+    grid-column-gap: 25px;
+    margin-right: 75px;
 }
 
 .small-image-box {
@@ -54,9 +56,13 @@ img {
 .wwmt {
     font-size: 20px;
     font-family: 'Roboto', Arial, sans-serif;
+    margin-top: 50px;
 }
 
 .product-description {
     font-size: 16px;
     font-family: 'Lato', Arial, sans-serif;
+    margin-top: 25px;
+    line-height: 1.5;
+
 }
