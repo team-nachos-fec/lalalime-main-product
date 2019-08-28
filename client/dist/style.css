@@ -40,3 +40,23 @@ img {
     margin-top: 30px;
     margin-left: 50px;
 }
+
+.product-name {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-price {
+    font-size: 20px;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+}
+
+.wwmt {
+    font-size: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.product-description {
+    font-size: 16px;
+    font-family: 'Lato', Arial, sans-serif;
+}
