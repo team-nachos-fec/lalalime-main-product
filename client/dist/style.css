@@ -11,6 +11,15 @@ hr {
     margin-top: 25px;
 }
 
+.crumb-box {
+    margin-left: 10px;
+}
+
+.crumb {
+    font-size: 14px;
+    font-family: Arial;
+}
+
 .container {
     display: grid;
     grid-template: 1500px / 7% 50% 43%;

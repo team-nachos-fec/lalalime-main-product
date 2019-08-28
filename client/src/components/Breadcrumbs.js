@@ -2,10 +2,10 @@ import React from 'react';
 
 const Breadcrumbs = (props) => {
     return (
-        <div>
-            <span>Women</span>
+        <div className="crumb-box">
+            <span className="crumb">Women</span>
             {props.breadcrumbs.map((crumb, key) => {
-                return <span key={key}> > {crumb}</span>
+                return <span className="crumb" key={key}> > {crumb}</span>
             })}
         </div>
     )
