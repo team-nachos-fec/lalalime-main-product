@@ -229,3 +229,31 @@ hr {
 .add-to-bag:hover {
     background-color: #F07070;
 }
+
+.social-media-box {
+    width: 90%;
+    height: 30px;
+    margin: 10px auto 0px auto;
+}
+
+.social-media-box img {
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.social-media-button {
+    border: none;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    margin-right: 33px;
+    outline: none;
+    cursor: pointer;
+}
+
+.vertical-line {
+    border-left: 2px solid #CFCFCF;
+    margin-right: 20px;
+}

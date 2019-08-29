@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductColorsAndSizes from './ProductColorsAndSizes.js';
 import Checkout from './Checkout.js';
+import SocialMedia from './SocialMedia.js';
 
 const ProductDetail = (props) => {
     return (
@@ -12,6 +13,7 @@ const ProductDetail = (props) => {
             <hr/>
             <ProductColorsAndSizes allColors={props.allColors} currentColor={props.currentColor}/>
             <Checkout />
+            <SocialMedia />
         </div>
     )
 }
