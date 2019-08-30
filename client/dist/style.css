@@ -287,7 +287,26 @@ hr {
     margin-top: 20px;
 }
 
-.fabric-info-box div {
+.fabric-box {
+    margin-top: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    margin-bottom: 250px;
+}
+
+.care-box {
+    margin-top: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+
+.features-box {
     margin-top: 20px;
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
@@ -310,6 +329,39 @@ hr {
     float: right;
     margin-right: 20px;
     line-height: 20px;
+}
+
+.fabric-box p {
+    margin-left: 20px;
+}
+
+.fabric-content {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'Lato', Arial, sans-serif;
+    background-color: #FFF;
+    height: 225px;
+}
+
+.trademark {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.fabric-para {
+    font-size: 16px;
+}
+
+.fabric-list div {
+    width: 45%;
+    display: inline-block;
+    margin-left: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fabric-line {
+    width: 90%;
 }
 
 .show {
