@@ -336,13 +336,13 @@ hr {
 }
 
 .fabric-content {
-    display: inline-block;
+    display: none;
     opacity: 0;
     margin: 0 auto;
     font-family: 'Lato', Arial, sans-serif;
     background-color: #FFF;
     height: 225px;
-    transition: opacity 0.5s;
+    transition: opacity 1s, display 1s;
 }
 
 .trademark {
@@ -373,7 +373,7 @@ hr {
 }
 
 .fabric-space {
-    margin-bottom: 250px;
+    margin-bottom: 0px;
 }
 
 .show-fabric {
