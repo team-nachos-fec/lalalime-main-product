@@ -9,9 +9,14 @@ const ProductColorsAndSizes = (props) => {
             })}
             <p className="color-name">{props.currentColor[0]}</p>
             </div>
-            <div className="sizes-box">
+            <div className="sizes-box" onClick={props.toggleSizes}>
                 <label>Size</label>
                 <span>Select Size ></span>
+                <div id="sizes-dropdown" className="sizes-content">
+                    {props.sizes.map((size, key) => {
+                        return <div className="size-number">{size}</div>
+                    })}
+                </div>
             </div>
             <span className="size-guide">Size guide</span>
             <div className="model-info">Sydney is 5’9” and wears a size 4</div>
