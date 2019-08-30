@@ -18,10 +18,15 @@ class App extends React.Component {
             currentImages: []
         }
         this.componentDidMount = this.componentDidMount.bind(this);
+        this.getData = this.getData.bind(this);
     }
 
     // Get a specific product from database
     componentDidMount() {
+        this.getData();
+    }
+
+    getData() {
         axios.get('/api/products')
         .then((response) => {
             console.log('Yay got data', response.data[0])
