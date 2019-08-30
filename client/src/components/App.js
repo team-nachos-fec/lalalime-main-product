@@ -22,6 +22,7 @@ class App extends React.Component {
         this.getData = this.getData.bind(this);
         this.toggleSizes = this.toggleSizes.bind(this);
         this.onClickSize = this.onClickSize.bind(this);
+        this.toggleFabric = this.toggleFabric.bind(this);
     }
 
     // Get a specific product from database
@@ -59,6 +60,11 @@ class App extends React.Component {
         })
     }
 
+    toggleFabric() {
+        document.getElementById('fabric-box').classList.toggle('fabric-space')
+        document.getElementById('fabric-dropdown').classList.toggle('show-fabric')
+    }
+
     
     render() {
         return (
@@ -67,7 +73,7 @@ class App extends React.Component {
               <div className="container">
                 <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
                 <ImagesList currentImages={this.state.currentImages.slice(2)} />
-                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} sizes={this.state.sizes} toggleSizes={this.toggleSizes} currentSize={this.state.currentSize} onClickSize={this.onClickSize}/>
+                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} sizes={this.state.sizes} toggleSizes={this.toggleSizes} currentSize={this.state.currentSize} onClickSize={this.onClickSize} toggleFabric={this.toggleFabric}/>
               </div>
             </div>
         )

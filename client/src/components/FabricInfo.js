@@ -3,7 +3,7 @@ import React from 'react';
 const FabricInfo = (props) => {
     return (
         <div className="fabric-info-box">
-            <div className="fabric-box">
+            <div id="fabric-box" onClick={props.toggleFabric}>
                 <h3 className="fabric-text">Fabric</h3>
                 <h3 className="fabric-plus">+</h3>
                 <div id="fabric-dropdown" className="fabric-content">
