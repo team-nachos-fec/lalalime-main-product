@@ -12,7 +12,7 @@ const ProductDetail = (props) => {
             <h2 className="wwmt">Why we made this</h2>
             <p className="product-description">{props.description}</p>
             <hr/>
-            <ProductColorsAndSizes allColors={props.allColors} currentColor={props.currentColor} sizes={props.sizes} toggleSizes={props.toggleSizes}/>
+            <ProductColorsAndSizes allColors={props.allColors} currentColor={props.currentColor} sizes={props.sizes} toggleSizes={props.toggleSizes} currentSize={props.currentSize} onClickSize={props.onClickSize}/>
             <Checkout />
             <SocialMedia />
             <FabricInfo />

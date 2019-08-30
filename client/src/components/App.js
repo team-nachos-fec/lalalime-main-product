@@ -14,12 +14,14 @@ class App extends React.Component {
             price: '',
             description: '',
             sizes: [],
+            currentSize: 'Select Size',
             breadcrumbs: [],
             currentImages: []
         }
         this.componentDidMount = this.componentDidMount.bind(this);
         this.getData = this.getData.bind(this);
         this.toggleSizes = this.toggleSizes.bind(this);
+        this.onClickSize = this.onClickSize.bind(this);
     }
 
     // Get a specific product from database
@@ -51,6 +53,12 @@ class App extends React.Component {
         document.getElementById('sizes-dropdown').classList.toggle('show');
     }
 
+    onClickSize(event) {
+        this.setState({
+            currentSize: event.target.innerText
+        })
+    }
+
     
     render() {
         return (
@@ -59,7 +67,7 @@ class App extends React.Component {
               <div className="container">
                 <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
                 <ImagesList currentImages={this.state.currentImages.slice(2)} />
-                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} sizes={this.state.sizes} toggleSizes={this.toggleSizes}/>
+                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} sizes={this.state.sizes} toggleSizes={this.toggleSizes} currentSize={this.state.currentSize} onClickSize={this.onClickSize}/>
               </div>
             </div>
         )

@@ -11,10 +11,10 @@ const ProductColorsAndSizes = (props) => {
             </div>
             <div className="sizes-box" onClick={props.toggleSizes}>
                 <label>Size</label>
-                <span>Select Size ></span>
+                <span>{props.currentSize} ></span>
                 <div id="sizes-dropdown" className="sizes-content">
                     {props.sizes.map((size, key) => {
-                        return <div className="size-number">{size}</div>
+                        return <div className="size-number" key={key} onClick={props.onClickSize}>{size}</div>
                     })}
                 </div>
             </div>
