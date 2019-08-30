@@ -2,6 +2,7 @@ import React from 'react';
 import ProductColorsAndSizes from './ProductColorsAndSizes.js';
 import Checkout from './Checkout.js';
 import SocialMedia from './SocialMedia.js';
+import FabricInfo from './FabricInfo.js';
 
 const ProductDetail = (props) => {
     return (
@@ -14,6 +15,7 @@ const ProductDetail = (props) => {
             <ProductColorsAndSizes allColors={props.allColors} currentColor={props.currentColor}/>
             <Checkout />
             <SocialMedia />
+            <FabricInfo />
         </div>
     )
 }
