@@ -2,7 +2,7 @@ import React from 'react';
 
 const FabricInfo = (props) => {
     return (
-        <div className="fabric-info">
+        <div className="fabric-info-box">
             <div className="fabric-box">
                 <h3 className="fabric-text">Fabric</h3>
                 <h3 className="fabric-plus">+</h3>

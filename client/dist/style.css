@@ -272,9 +272,14 @@ hr {
     margin-right: 20px;
 }
 
-.fabric-info div {
+.fabric-info-box {
+    margin-top: 20px;
+}
+
+.fabric-info-box div {
     margin-top: 20px;
     background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
     width: 100%;
     height: 60px;
     cursor: pointer;
