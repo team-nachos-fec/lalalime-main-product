@@ -24,6 +24,7 @@ class App extends React.Component {
         this.onClickSize = this.onClickSize.bind(this);
         this.toggleFabric = this.toggleFabric.bind(this);
         this.toggleCare = this.toggleCare.bind(this);
+        this.toggleFeatures = this.toggleFeatures.bind(this);
     }
 
     // Get a specific product from database
@@ -70,6 +71,10 @@ class App extends React.Component {
         document.getElementById('care-dropdown').classList.toggle('show')
     }
 
+    toggleFeatures() {
+        document.getElementById('features-dropdown').classList.toggle('show-features')
+    }
+
     
     render() {
         return (
@@ -78,7 +83,7 @@ class App extends React.Component {
               <div className="container">
                 <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
                 <ImagesList currentImages={this.state.currentImages.slice(2)} />
-                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} sizes={this.state.sizes} toggleSizes={this.toggleSizes} currentSize={this.state.currentSize} onClickSize={this.onClickSize} toggleFabric={this.toggleFabric} toggleCare={this.toggleCare}/>
+                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} sizes={this.state.sizes} toggleSizes={this.toggleSizes} currentSize={this.state.currentSize} onClickSize={this.onClickSize} toggleFabric={this.toggleFabric} toggleCare={this.toggleCare} toggleFeatures={this.toggleFeatures}/>
               </div>
             </div>
         )

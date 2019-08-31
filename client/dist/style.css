@@ -395,6 +395,32 @@ hr {
     width: 90%;
 }
 
+.features-content {
+    position: relative;
+    display: none;
+    background-color: #FFF;
+    height: 325px;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+.features-list div {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin-left: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.lycra {
+    bottom: 15px;
+}
+
+.ns {
+    bottom: 70px;
+}
+
+
 .show {
     display: block;
 }
@@ -406,4 +432,8 @@ hr {
 .show-fabric {
     display: inline-block;
     opacity: 1;
+}
+
+.show-features {
+    display: inline-block;
 }

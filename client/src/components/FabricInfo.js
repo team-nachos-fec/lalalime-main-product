@@ -31,9 +31,21 @@ const FabricInfo = (props) => {
                 <div><img src="https://static.thenounproject.com/png/617861-200.png" className="care-img"/> <p className="care-para">Do not dry clean</p></div>
                 <div className="imported">Imported</div>
             </div>
-            <div className="features-box">
+            <div className="features-box" onClick={props.toggleFeatures}>
                 <h3 className="fabric-text">Features</h3>
                 <h3 className="fabric-plus">+</h3>
+            </div>
+            <div id="features-dropdown" className="features-content">
+                <div className="features-list">
+                    <div>Designed For</div>
+                    <div>All Around On-The-Go</div>
+                    <div className="lycra">Lycra®</div>
+                    <div>Added Lycra® Fibre For Stretch And Shape Retention</div>
+                    <div className="ns">Naked Sensation</div>
+                    <div>Engineered To Feel Like Your Go-To, Lightweight, Second-Skin Layer—You'll Forget You're Wearing This Next-To-Nothing Sensation As You Move</div>
+                    <div>Convenient Pockets</div>
+                    <div>Help Keep Essentials Secure</div>
+                </div>
             </div>
         </div>
     )
