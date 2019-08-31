@@ -15,7 +15,7 @@ const ProductDetail = (props) => {
             <ProductColorsAndSizes allColors={props.allColors} currentColor={props.currentColor} sizes={props.sizes} toggleSizes={props.toggleSizes} currentSize={props.currentSize} onClickSize={props.onClickSize}/>
             <Checkout />
             <SocialMedia />
-            <FabricInfo toggleFabric={props.toggleFabric}/>
+            <FabricInfo toggleFabric={props.toggleFabric} toggleCare={props.toggleCare}/>
         </div>
     )
 }

@@ -356,6 +356,33 @@ hr {
     margin-left: 24px;
 }
 
+.care-content {
+    display: none;
+    font-family: 'Lato', Arial, sans-serif;
+    background-color: #FFF;
+    height: 360px;
+}
+
+.wash-para {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.care-img {
+    height: 26px;
+    width: 26px;
+    margin-left: 24px;
+}
+
+.care-para {
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.imported {
+    margin-left: 25px;
+}
+
 .fabric-list div {
     width: 45%;
     display: inline-block;
