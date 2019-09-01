@@ -456,7 +456,7 @@ hr {
 }
 
 .show-fabric {
-    display: inline-block;
+    display: block;
     opacity: 1;
 }
 
