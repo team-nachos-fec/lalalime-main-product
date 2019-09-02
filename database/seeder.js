@@ -102,13 +102,16 @@ let generateRandomIndex = (array) => {
 let generateTopProduct = () => {
     let outputArray = [];
     for (var i = 0; i < tops.length; i++) {
+        let copyArray = topImages[i].slice(0);
         for (var j = 0; j < 17; j++) {
+            let secondCopy = copyArray.slice(0);
             let oneProduct = {};
             // Select product colors randomly
-            let randomImages = generateRandomIndex(topImages);
             let randomImagesArray = [];
-            for (randomImages; randomImages >= 0; randomImages--) {
-                randomImagesArray.push(topImages[i][randomImages])
+            for (var x = 0; x < 3; x++) {
+                let randomIndex = generateRandomIndex(secondCopy);
+                randomImagesArray.push(secondCopy[randomIndex]);
+                secondCopy.splice(randomIndex, 1);
             }
             // Select product colors randomly 
             oneProduct['images'] = randomImagesArray;
@@ -128,13 +131,16 @@ let generateTopProduct = () => {
 let generateBottomProduct = () => {
     let outputArray = [];
     for (var i = 0; i < bottoms.length; i++) {
+        let copyArray = bottomImages[i].slice(0);
         for (var j = 0; j < 17; j++) {
+            let secondCopy = copyArray.slice(0);
             let oneProduct = {};
             // Select product colors randomly
-            let randomImages = generateRandomIndex(topImages);
             let randomImagesArray = [];
-            for (randomImages; randomImages >= 0; randomImages--) {
-                randomImagesArray.push(topImages[i][randomImages])
+            for (var x = 0; x < 3; x++) {
+                let randomIndex = generateRandomIndex(secondCopy);
+                randomImagesArray.push(secondCopy[randomIndex]);
+                secondCopy.splice(randomIndex, 1);
             }
             // Select product colors randomly
             oneProduct['images'] = randomImagesArray;
