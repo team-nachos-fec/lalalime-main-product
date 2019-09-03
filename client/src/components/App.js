@@ -26,6 +26,9 @@ class App extends React.Component {
         this.toggleCare = this.toggleCare.bind(this);
         this.toggleFeatures = this.toggleFeatures.bind(this);
         this.toggleSocialMedia = this.toggleSocialMedia.bind(this);
+        this.firstBox = this.firstBox.bind(this);
+        this.secondBox = this.secondBox.bind(this);
+        this.thirdBox = this.thirdBox.bind(this);
     }
 
     // Get a specific product from database
@@ -50,6 +53,24 @@ class App extends React.Component {
         })
         .catch((err) => {
             console.error('Uh oh did not work', err)
+        })
+    }
+
+    firstBox() {
+        this.setState({
+            currentImages: this.state.images[0]
+        })
+    }
+
+    secondBox() {
+        this.setState({
+            currentImages: this.state.images[1]
+        })
+    }
+
+    thirdBox() {
+        this.setState({
+            currentImages: this.state.images[2]
         })
     }
 
@@ -88,7 +109,7 @@ class App extends React.Component {
               <div className="container">
                 <ScrollingImages currentImages={this.state.currentImages.slice(2)} />
                 <ImagesList currentImages={this.state.currentImages.slice(2)} />
-                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} sizes={this.state.sizes} toggleSizes={this.toggleSizes} currentSize={this.state.currentSize} onClickSize={this.onClickSize} toggleFabric={this.toggleFabric} toggleCare={this.toggleCare} toggleFeatures={this.toggleFeatures} toggleSocialMedia={this.toggleSocialMedia}/>
+                <ProductDetail name={this.state.name} price={this.state.price} description={this.state.description} allColors={this.state.images} currentColor={this.state.currentImages.slice(0, 2)} firstColor={this.state.images.slice(0, 1)} secondColor={this.state.images.slice(1, 2)} thirdColor={this.state.images.slice(2, 3)} sizes={this.state.sizes} toggleSizes={this.toggleSizes} currentSize={this.state.currentSize} onClickSize={this.onClickSize} toggleFabric={this.toggleFabric} toggleCare={this.toggleCare} toggleFeatures={this.toggleFeatures} toggleSocialMedia={this.toggleSocialMedia} firstBox={this.firstBox} secondBox={this.secondBox} thirdBox={this.thirdBox}/>
               </div>
             </div>
         )
