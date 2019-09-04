@@ -112,6 +112,10 @@ hr {
     margin-bottom: 10px;
 }
 
+.each-color {
+    cursor: pointer;
+}
+
 .sizes-box {
     display: inline-block;
     background-color: #fff;

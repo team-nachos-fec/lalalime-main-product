@@ -5,13 +5,13 @@ const ProductColorsAndSizes = (props) => {
         <div>
             <div className="color-box">
             {props.firstColor.map((image, key) => {
-                return <img src={image[1]} key={key} onClick={props.firstBox}/>
+                return <img src={image[1]} key={key} className="each-color" onClick={props.firstBox}/>
             })}
             {props.secondColor.map((image, key) => {
-                return <img src={image[1]} key={key} onClick={props.secondBox}/>
+                return <img src={image[1]} key={key} className="each-color" onClick={props.secondBox}/>
             })}
             {props.thirdColor.map((image, key) => {
-                return <img src={image[1]} key={key} onClick={props.thirdBox}/>
+                return <img src={image[1]} key={key} className="each-color" onClick={props.thirdBox}/>
             })}
             <p className="color-name">{props.currentColor[0]}</p>
             </div>
