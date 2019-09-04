@@ -3,7 +3,7 @@ import React from 'react';
 const SocialMedia = (props) => {
     return (
         <div className="social-media-box">
-            <img src="https://cdn0.iconfinder.com/data/icons/feather/96/591236-share-512.png" />
+            <img src="https://cdn0.iconfinder.com/data/icons/feather/96/591236-share-512.png"/>
             <button type="button" className="social-media-button" onClick={props.toggleSocialMedia}> Share</button>
             <span className="vertical-line"> </span>
             <img src="https://image.flaticon.com/icons/svg/69/69425.svg" />

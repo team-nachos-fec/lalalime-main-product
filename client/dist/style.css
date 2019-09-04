@@ -293,8 +293,8 @@ hr {
     margin-top: 5px;
     line-height: 55px;
     border-radius: 10px;
-    width: 45%;
     transition: opacity 0.25s;
+    padding-right: 20px;
 }
 
 .social-media-icons img {
