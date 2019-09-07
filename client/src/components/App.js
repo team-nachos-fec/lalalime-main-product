@@ -4,6 +4,7 @@ import ScrollingImages from './ScrollingImages.js';
 import ImagesList from './ImagesList.js';
 import Breadcrumbs from './Breadcrumbs.js';
 import ProductDetail from './ProductDetail.js';
+import '../../dist/styles/app.css';
 
 class App extends React.Component {
     constructor(props) {
