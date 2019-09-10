@@ -41,14 +41,15 @@ class App extends React.Component {
         axios.get('/api/products')
         .then((response) => {
             console.log('Yay got data', response.data[0])
+            let randomIndex = Math.floor(Math.random() * response.data.length)
             this.setState({
-                images: response.data[0].images,
-                name: response.data[0].name,
-                price: response.data[0].price,
-                description: response.data[0].description,
-                sizes: response.data[0].sizes,
-                breadcrumbs: response.data[0].breadcrumbs,
-                currentImages: response.data[0].images[0]
+                images: response.data[randomIndex].images,
+                name: response.data[randomIndex].name,
+                price: response.data[randomIndex].price,
+                description: response.data[randomIndex].description,
+                sizes: response.data[randomIndex].sizes,
+                breadcrumbs: response.data[randomIndex].breadcrumbs,
+                currentImages: response.data[randomIndex].images[0]
             })
             console.log('State has been set', this.state);
         })
